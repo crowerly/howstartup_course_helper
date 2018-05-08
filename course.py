@@ -11,6 +11,7 @@ SECRET_KEY = ' '
 
 client = AipOcr(APP_ID, API_KEY, SECRET_KEY)
 
+#答案
 answer = ['需求', '考核', '不需要']
 flash_start_x = 420
 flash_start_y = 260
