@@ -167,6 +167,8 @@ if __name__ == '__main__':
         former = print_screen("former")
         time.sleep(35)
         latter = print_screen("latter")
+
+        # 二维数组切片，用于从截屏中取下flash框架
         cv2_former = cv2.imread('former.jpeg')[flash_start_x:flash_end_x, flash_start_y:flash_end_y]
         cv2_latter = cv2.imread('latter.jpeg')[flash_start_x:flash_end_x, flash_start_y:flash_end_y]
 
