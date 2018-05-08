@@ -5,13 +5,14 @@ import pytesseract
 import pyautogui as pag
 from aip import AipOcr
 
+# 百度API相关验证信息，需在百度AI进行申请。每天有一定免费使用次数
 APP_ID = ' '
 API_KEY = ' '
 SECRET_KEY = ' '
 
 client = AipOcr(APP_ID, API_KEY, SECRET_KEY)
 
-#答案
+# 答案
 answer = ['需求', '考核', '不需要']
 flash_start_x = 420
 flash_start_y = 260
