@@ -13,7 +13,7 @@ SECRET_KEY = ' '
 client = AipOcr(APP_ID, API_KEY, SECRET_KEY)
 
 # 答案
-answer = ['需求', '考核', '不需要']
+answer = ['政治', '密码', '1%', '实现']
 flash_start_x = 420
 flash_start_y = 260
 flash_end_x = 1470
@@ -164,7 +164,6 @@ def issue_handler(img_src, local_model=True):
 
 
 if __name__ == '__main__':
-    time.sleep(2)
     while answer:
         former = print_screen("former")
         time.sleep(35)
@@ -175,7 +174,7 @@ if __name__ == '__main__':
         cv2_latter = cv2.imread('latter.jpeg')[flash_start_x:flash_end_x, flash_start_y:flash_end_y]
 
         n = hash_cmp(img_hash(cv2_former), img_hash(cv2_latter))
-        if n < 10:
+        if n < 5:
             ret_code = issue_handler(cv2_latter)
             print('hash_code is ' + str(n) + ' ret_code is : ' + str(ret_code))
 
